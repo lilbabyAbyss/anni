@@ -94,8 +94,8 @@ function showSlide(index) {
   setTimeout(() => {
     // Main slide HTML
     container.innerHTML = `
-      <h1 style="margin-left:${Math.random()*10}px;">${slide.title}</h1> // im done
-      <p></p>
+      <h1 style="margin-left:${Math.random()*10}px;">${slide.title}</h1> 
+      <p></p> // im done
       ${
         slide.photos || slide.videos
           ? `<div id="mediaCollage" style="
