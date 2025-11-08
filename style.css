@@ -1,0 +1,126 @@
+/* ================== CSS ================== */
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Parisienne&display=swap");
+
+/* Body styling */
+body {
+  margin: 0;
+  font-family: "Patrick Hand", cursive;
+  background: linear-gradient(180deg, #ffb6c1, #d291bc);
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  height: 100vh;
+  transition: background 1s ease;
+}
+
+/* Slide container */
+.container {
+  max-width: 700px;
+  padding: 2rem;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
+}
+
+/* Slide titles */
+h1 {
+  font-family: "Parisienne", cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Slide paragraphs */
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #fff;
+}
+
+/* Buttons */
+.btn {
+  background: #ffeb3b88;
+  color: #333;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Patrick Hand", cursive;
+}
+
+.btn:hover {
+  background: #ffeb3bcc;
+}
+
+/* Floating hearts */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255, 182, 193, 0.7);
+  font-size: 1.5rem;
+  animation: float 6s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh) scale(0.5);
+  }
+  to {
+    transform: translateY(-10vh) scale(1.2);
+  }
+}
+
+/* Click start overlay */
+#clickStart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffb6c1;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#clickStart h2 {
+  text-align: center;
+  color: white;
+  font-family: "Parisienne", cursive;
+  font-size: 2rem;
+}
+
+/* Countdown */
+#countdown {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
