@@ -85,17 +85,17 @@ function typeText(element, text) {
   }, 25); // Speed of typing in milliseconds
 }
 
-// ---------- SHOW SLIDE ---------- im so done
+// ---------- SHOW SLIDE ---------- im done
 function showSlide(index) {
   const slide = slides[index]; // Get the slide info
   body.style.background = slide.color; // Change background
 
-  container.style.opacity = 0; // Fade out old stuff 
+  container.style.opacity = 0; // Fade out old stuff
   setTimeout(() => {
     // Main slide HTML
     container.innerHTML = `
       <h1 style="margin-left:${Math.random()*10}px;">${slide.title}</h1> 
-      <p></p> 
+      <p></p>
       ${
         slide.photos || slide.videos
           ? `<div id="mediaCollage" style="
@@ -108,20 +108,24 @@ function showSlide(index) {
                 overflow-y:auto;
             ">
               ${
+                // Photos
                 (slide.photos || []).map(photo => 
                   `<img src="${photo}" style="
-                      width: auto; 
-                      height: 30vh; 
-                      object-fit: cover; 
+                      width:auto; 
+                      height:30vh; 
+                      object-fit:cover; 
                       border-radius:1rem; 
                       box-shadow:0 0 10px rgba(0,0,0,0.3);
+                      transform: ${photo === 'photo6.jpeg' ? 'rotate(90deg)' : 'none'};
                   ">`
                 ).join('') +
+
+                // Videos
                 (slide.videos || []).map(video => 
                   `<video src="${video}" style="
-                      width: auto; 
-                      height: 30vh; 
-                      object-fit: cover; 
+                      width:auto; 
+                      height:30vh; 
+                      object-fit:cover; 
                       border-radius:1rem; 
                       box-shadow:0 0 10px rgba(0,0,0,0.3);
                   " controls muted loop></video>`
@@ -135,7 +139,8 @@ function showSlide(index) {
       </div>
     `;
 
-    typeText(container.querySelector('p'), slide.text); // Animate paragraph text
+    // Typewriter effect for text
+    typeText(container.querySelector('p'), slide.text);
     container.style.opacity = 1; // Fade in new content
   }, 400);
 }
