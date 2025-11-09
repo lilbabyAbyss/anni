@@ -81,7 +81,7 @@ function typeText(element, text) {
   const interval = setInterval(() => {
     element.textContent += text[i]; // Add one letter at a time (oh my fuck)
     i++; // (????)
-    if(i >= text.length) clearInterval(interval); // Stop when done
+    if(i >= text.length) clearInterval(interval); // Stop when it gets done 
   }, 25); // Speed of typing in milliseconds
 }
 
