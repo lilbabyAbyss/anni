@@ -19,7 +19,7 @@ const slides = [
   text: "Some of my favourite moments with you 💕",
   color: "linear-gradient(180deg, #ffe0f0, #ffb6c1)",
 photos: ["photo1.JPG","photo2.JPEG","photo3.JPEG","photo4.JPEG","photo5.JPEG","photo6.JPEG"],
-videos: ["video1.MP4"]
+videos: ["video1.mp4"]
 
 
 
