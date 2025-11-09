@@ -85,17 +85,17 @@ function typeText(element, text) {
   }, 25); // Speed of typing in milliseconds
 }
 
-// ---------- SHOW SLIDE ----------
+// ---------- SHOW SLIDE ---------- im so done
 function showSlide(index) {
   const slide = slides[index]; // Get the slide info
   body.style.background = slide.color; // Change background
 
-  container.style.opacity = 0; // Fade out old stuff
+  container.style.opacity = 0; // Fade out old stuff 
   setTimeout(() => {
     // Main slide HTML
     container.innerHTML = `
       <h1 style="margin-left:${Math.random()*10}px;">${slide.title}</h1> 
-      <p></p> // im done
+      <p></p> 
       ${
         slide.photos || slide.videos
           ? `<div id="mediaCollage" style="
