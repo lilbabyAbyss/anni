@@ -18,8 +18,9 @@ const slides = [
   title: "Photos & Videos of Us",
   text: "Some of my favourite moments with you 💕",
   color: "linear-gradient(180deg, #ffe0f0, #ffb6c1)",
-photos: ["photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg","photo6.jpg"],
-videos: ["video1.mp4"]
+photos: ["photo1.JPG","photo2.JPEG","photo3.JPEG","photo4.JPEG","photo5.JPEG","photo6.JPEG"],
+videos: ["video1.MP4"]
+
 
 
   },
@@ -86,7 +87,7 @@ function typeText(element, text) {
   }, 25); // Speed of typing in milliseconds
 }
 
-// ---------- SHOW SLIDE ---------- im done
+// ---------- SHOW SLIDE ----------
 function showSlide(index) {
   const slide = slides[index]; // Get the slide info
   body.style.background = slide.color; // Change background
@@ -107,29 +108,29 @@ function showSlide(index) {
                 gap:10px;
                 max-height:60vh; 
                 overflow-y:auto;
+                padding:10px;
             ">
               ${
                 // Photos
                 (slide.photos || []).map(photo => 
                   `<img src="${photo}" style="
-                      width:auto; 
                       height:30vh; 
+                      width:auto;
                       object-fit:cover; 
                       border-radius:1rem; 
                       box-shadow:0 0 10px rgba(0,0,0,0.3);
-                      transform: ${photo === 'photo6.jpeg' ? 'rotate(90deg)' : 'none'};
                   ">`
                 ).join('') +
 
                 // Videos
                 (slide.videos || []).map(video => 
                   `<video src="${video}" style="
-                      width:auto; 
                       height:30vh; 
+                      width:auto;
                       object-fit:cover; 
                       border-radius:1rem; 
                       box-shadow:0 0 10px rgba(0,0,0,0.3);
-                  " controls muted loop></video>`
+                  " controls muted loop></video>` 
                 ).join('')
               }
             </div>` 
@@ -145,8 +146,6 @@ function showSlide(index) {
     container.style.opacity = 1; // Fade in new content
   }, 400);
 }
-
-
 
 
 
