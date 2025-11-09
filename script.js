@@ -18,8 +18,8 @@ const slides = [
   title: "Photos & Videos of Us",
   text: "Some of my favourite moments with you 💕",
   color: "linear-gradient(180deg, #ffe0f0, #ffb6c1)",
-  photos: ["photo1.jpg","photo2.jpeg","photo3.jpeg","photo4.jpeg","photo5.jpeg","photo6.jpeg"], // images
-  videos: ["video1.mov"] // videos
+  photos: ["photo1.JPG","photo2.JPEG","photo3.JPEG","photo4.JPEG","photo5.JPEG","photo6.JPEG"], // images
+  videos: ["video1.MOV"] // videos
 
   },
   { title: "The Future", text: "I will be proposing to you in not too long, that is a promise. I cannot wait for all the long cozy nights, laughter and travel we will have.", color: "linear-gradient(180deg, #89f7fe, #66a6ff)" },
